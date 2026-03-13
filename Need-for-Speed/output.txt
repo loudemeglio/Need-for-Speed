@@ -1,0 +1,524 @@
+Terminal 1: Server
+julio@julio-VirtualBox:~/Escritorio/TALLER/TP FINAL 2/TP_TALLER$ ./server config.yaml
+[Acceptor] Socket created on port 8080
+==================================================
+    NEED FOR SPEED 2D - SERVER
+==================================================
+Port: 8080
+Press 'q' + Enter to stop
+==================================================
+[Server] Starting acceptor thread...
+[Server] Waiting for connections...
+==================================================
+[Acceptor] New connection accepted
+           Client ID: 1
+           Total clients: 1
+==================================================
+[Receiver] Player connected: julio 1
+[Receiver] julio 1 requested games list
+[Receiver] Sending 0 games to julio 1
+[Receiver] julio 1 creating game: sala 1 (max: 2, races: 3)
+[Match] Creado: julio 1 (code=1, max_players=2)
+[Match] >>> Creando GameLoop...
+[GameLoop] Constructor OK. Listo para gestionar múltiples carreras.
+[Match] >>> Iniciando GameLoop (thread)...
+[Match]   GameLoop iniciado y esperando jugadores
+[Match] Jugador agregado: julio 1 (id=1, total=1)
+
+╔════════════════════════════════════════════════════════════╗
+║  MATCH #1 - JUGADORES (1/2)                          ║
+╠════════════════════════════════════════════════════════════╣
+║ ID:   1 │ julio 1         │ [SIN AUTO]           │ ✗ NOT READY ║
+╚════════════════════════════════════════════════════════════╝
+
+[MatchesMonitor]   Match created: ID=1 Host=julio 1 (player_id=1)
+[MatchesMonitor] Socket registered: julio 1 in match 1
+[Receiver]   Race 1: Liberty City - ruta-1
+[Receiver]   Race 2: Liberty City - ruta-1
+[Receiver]   Race 3: Liberty City - ruta-1
+[Race] Configuración creada: Liberty City - server_src/city_maps/Liberty City/ruta-1.yaml[Match] Carrera agregada: Liberty City -> server_src/city_maps/Liberty City/ruta-1.yaml
+[Race] Configuración creada: Liberty City - server_src/city_maps/Liberty City/ruta-1.yaml[Match] Carrera agregada: Liberty City -> server_src/city_maps/Liberty City/ruta-1.yaml
+[Race] Configuración creada: Liberty City - server_src/city_maps/Liberty City/ruta-1.yaml[Match] Carrera agregada: Liberty City -> server_src/city_maps/Liberty City/ruta-1.yaml
+[Match] Configuradas 3 carreras en GameLoop
+[MatchesMonitor] Carreras agregadas a match 1
+[Receiver] Game created with ID: 1
+[ServerProtocol]   Sent 3 race paths to client
+[Receiver] Sent 3 race paths to julio 1
+[GameLoop] Carreras listas. PAUSADO esperando señal de inicio (start_game)...
+[Receiver] julio 1 selected car: Cavallo V8 (sport)
+[Match] Jugador julio 1 eligió auto Cavallo V8 (sport)
+[Match] >>> Registrando julio 1 en GameLoop con auto Cavallo V8
+[Car] Creado: Cavallo V8 (sport)
+[Car] Stats cargados para Cavallo V8: Max Speed=135 Accel=68 Handling=0.7 HP=80
+[GameLoop] Jugador agregado: julio 1 (ID: 1)
+[Match]   Jugador julio 1 agregado al GameLoop exitosamente
+
+╔════════════════════════════════════════════════════════════╗
+║  MATCH #1 - JUGADORES (1/2)                          ║
+╠════════════════════════════════════════════════════════════╣
+║ ID: 1   │ julio 1         │ Cavallo V8 (sport)   │ ✗ NOT READY ║
+╚════════════════════════════════════════════════════════════╝
+
+[Receiver]   ACK sent to julio 1
+[MatchesMonitor] Broadcasting to match 1 (excluding: julio 1)
+[MatchesMonitor]   Skipping julio 1 (sender)
+[MatchesMonitor] Broadcast completed: 0 messages sent to match 1
+[Receiver]   Broadcast triggered (excluding julio 1)
+==================================================
+[Acceptor] New connection accepted
+           Client ID: 2
+           Total clients: 2
+==================================================
+[Receiver] Player connected: julio 2
+[Receiver] julio 2 requested games list
+[Receiver] Sending 1 games to julio 2
+[Receiver] julio 2 joining game 1
+[MatchesMonitor] Socket registered: julio 2 in match 1
+[MatchesMonitor] join_match() called: player=julio 2 (id=2), match_id=1
+[Match] Jugador agregado: julio 2 (id=2, total=2)
+
+╔════════════════════════════════════════════════════════════╗
+║  MATCH #1 - JUGADORES (2/2)                          ║
+╠════════════════════════════════════════════════════════════╣
+║ ID: 1   │ julio 1         │ Cavallo V8 (sport)   │ ✗ NOT READY ║
+║ ID: 2   │ julio 2         │ [SIN AUTO]           │ ✗ NOT READY ║
+╚════════════════════════════════════════════════════════════╝
+
+[MatchesMonitor]   julio 2 (id=2) joined match 1
+[Receiver] julio 2 joined match 1
+[Receiver] Sending room snapshot to julio 2 (1 existing players)
+[Receiver]   → Player exists: julio 1
+[Receiver]   → Car: Cavallo V8
+[Receiver]   Snapshot sent with END marker to julio 2
+[ServerProtocol]   Sent 3 race paths to client
+[Receiver] Sent 3 race paths to julio 2
+[MatchesMonitor] Broadcasting to match 1 (excluding: julio 2)
+[MatchesMonitor]   Sent to julio 1
+[MatchesMonitor]   Skipping julio 2 (sender)
+[MatchesMonitor] Broadcast completed: 1 messages sent to match 1
+[Receiver] Broadcasted join notification (excluding julio 2)
+[Receiver] julio 2 selected car: J-Classic 600 (classic)
+[Match] Jugador julio 2 eligió auto J-Classic 600 (classic)
+[Match] >>> Registrando julio 2 en GameLoop con auto J-Classic 600
+[Car] Creado: J-Classic 600 (classic)
+[Car] Stats cargados para J-Classic 600: Max Speed=105 Accel=48 Handling=0.65 HP=100
+[GameLoop] Jugador agregado: julio 2 (ID: 2)
+[Match]   Jugador julio 2 agregado al GameLoop exitosamente
+
+╔════════════════════════════════════════════════════════════╗
+║  MATCH #1 - JUGADORES (2/2)                          ║
+╠════════════════════════════════════════════════════════════╣
+║ ID: 1   │ julio 1         │ Cavallo V8 (sport)   │ ✗ NOT READY ║
+║ ID: 2   │ julio 2         │ J-Classic 600 (class │ ✗ NOT READY ║
+╚════════════════════════════════════════════════════════════╝
+
+[Receiver]   ACK sent to julio 2
+[MatchesMonitor] Broadcasting to match 1 (excluding: julio 2)
+[MatchesMonitor]   Sent to julio 1
+[MatchesMonitor]   Skipping julio 2 (sender)
+[MatchesMonitor] Broadcast completed: 1 messages sent to match 1
+[Receiver]   Broadcast triggered (excluding julio 2)
+[Receiver] julio 1 set ready: YES
+[Match] julio 1 is now READY
+
+╔════════════════════════════════════════════════════════════╗
+║  MATCH #1 - JUGADORES (2/2)                          ║
+╠════════════════════════════════════════════════════════════╣
+║ ID: 1   │ julio 1         │ Cavallo V8 (sport)   │ ✓ READY ║
+║ ID: 2   │ julio 2         │ J-Classic 600 (class │ ✗ NOT READY ║
+╚════════════════════════════════════════════════════════════╝
+
+[MatchesMonitor] Broadcasting to match 1 (excluding: julio 1)
+[MatchesMonitor]   Skipping julio 1 (sender)
+[MatchesMonitor]   Sent to julio 2
+[MatchesMonitor] Broadcast completed: 1 messages sent to match 1
+[Receiver] julio 2 set ready: YES
+[Match] julio 2 is now READY
+
+╔════════════════════════════════════════════════════════════╗
+║  MATCH #1 - JUGADORES (2/2)                          ║
+╠════════════════════════════════════════════════════════════╣
+║ ID: 1   │ julio 1         │ Cavallo V8 (sport)   │ ✓ READY ║
+║ ID: 2   │ julio 2         │ J-Classic 600 (class │ ✓ READY ║
+╚════════════════════════════════════════════════════════════╝
+
+[MatchesMonitor] Broadcasting to match 1 (excluding: julio 2)
+[MatchesMonitor]   Sent to julio 1
+[MatchesMonitor]   Skipping julio 2 (sender)
+[MatchesMonitor] Broadcast completed: 1 messages sent to match 1
+[Receiver] julio 1 starting game 1
+[MatchesMonitor] Starting match 1
+[Match] ════════════════════════════════════════════
+[Match] 🏁 Petición de START recibida para Match 1
+[Match]   Condiciones cumplidas. Iniciando simulación...
+[GameLoop] >>> SEÑAL DE INICIO RECIBIDA. Desbloqueando simulación.
+[Match] 🚀 Clientes notificados. ¡Juego en marcha!
+[Match] ════════════════════════════════════════════
+[Receiver]   Game 1 started successfully!
+[Receiver] 📡 Broadcasting MSG_GAME_STARTED to all players...
+[Receiver]     Sent to julio 1 (requester)
+[MatchesMonitor] Broadcasting to match 1 (excluding: julio 1)
+[MatchesMonitor]   Skipping julio 1 (sender)
+[MatchesMonitor]   Sent to julio 2
+[MatchesMonitor] Broadcast completed: 1 messages sent to match 1
+[Receiver]     Broadcasted to other players
+[Receiver]   Exiting lobby loop for julio 1 (match_id=1, is_running=1)
+[Receiver] Sender started for player julio 1
+[Receiver] 🎮 Game loop started - listening for player commands...
+[GameLoop] ═══════════════════════════════════════════════
+[GameLoop]  PARTIDA INICIADA - SIMULACIÓN COMENZANDO 
+[GameLoop]  Carreras configuradas: 3
+[GameLoop]  Jugadores registrados: 2
+[GameLoop] ═══════════════════════════════════════════════
+Match info: 2 players, 3 races.
+[GameLoop] >>> RESETEANDO JUGADORES PARA NUEVA CARRERA
+[GameLoop]   Mapa actual: server_src/city_maps/Liberty City/ruta-1.yaml
+[GameLoop] >>> Cargando spawns desde: server_src/city_maps/Liberty City/ruta-1.yaml
+[GameLoop]   Spawn point: (4440, 81) angle=0 rad
+[GameLoop]   Spawn point: (4400, 61) angle=0 rad
+[GameLoop]   Spawn point: (4400, 101) angle=0 rad
+[GameLoop]   Spawn point: (4345, 101) angle=0 rad
+[GameLoop]   Spawn point: (4345, 81) angle=0 rad
+[GameLoop]   Spawn point: (4275, 81) angle=0 rad
+[GameLoop]   Spawn point: (4275, 101) angle=0 rad
+[GameLoop]   Spawn point: (4195, 86) angle=0 rad
+[GameLoop]   Cargados 8 spawn points
+[Car] Cavallo V8 reseteado
+[Car] Cavallo V8 reseteado
+[GameLoop]   Jugador julio 1 (ID=1) → spawn[0]: (4440, 81) angle=0 rad
+[GameLoop]     Verificación: Player pos=(4440, 81) Car pos=(4440, 81)
+[Car] J-Classic 600 reseteado
+[Car] J-Classic 600 reseteado
+[GameLoop]   Jugador julio 2 (ID=2) → spawn[1]: (4400, 61) angle=0 rad
+[GameLoop]     Verificación: Player pos=(4400, 61) Car pos=(4400, 61)
+[GameLoop] <<< Reseteo completado
+[GameLoop]   Cronómetro iniciado
+[Receiver] Unknown message type: 9
+[Receiver]   Exiting lobby loop for julio 2 (match_id=1, is_running=1)
+[Receiver] Sender started for player julio 2
+[Receiver] 🎮 Game loop started - listening for player commands...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terminal 2: Cliente 1:
+julio@julio-VirtualBox:~/Escritorio/TALLER/TP FINAL 2/TP_TALLER$ ./client
+=== Need for Speed 2D - Cliente ===
+Conectando a localhost:8080
+[ClientProtocol] Connected to server localhost:8080
+[Client] Cliente inicializado para Player
+[ClientProtocol] Received client ID: 1
+[Client] Iniciando fase de lobby Qt...
+[Controller] Controlador creado (sin conectar al servidor todavía)
+[Controller] Mostrando lobby principal
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+Fuente cargada: ArcadeClassic
+Imagen de fondo cargada correctamente
+SDL Audio inicializado correctamente
+Música de fondo iniciada en loop
+QWidget::setLayout: Cannot set layout to 0
+[LobbyWindow] Botón Jugar presionado
+[Controller] Usuario presionó 'Jugar'
+[LobbyClient] Connected to server 
+[Controller] Conectado exitosamente
+[Controller] Mostrando ventana de ingreso de nombre
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+Nombre de jugador confirmado: julio 1
+[Controller] Usuario confirmó nombre: julio 1
+[Protocol] DEBUG: Username: 'julio 1' (length: 7)
+[Protocol] DEBUG: Buffer size: 10 bytes
+[Protocol] DEBUG: Buffer content: 01 00 07 6A 75 6C 69 6F 20 31 
+[Protocol] DEBUG: Length encoded in buffer: 7
+[Protocol] Sent username: julio 1
+[Controller] Nombre enviado al servidor
+[Controller] Esperando mensaje de bienvenida...
+[LobbyClient] DEBUG: Waiting for welcome message...
+[LobbyClient] DEBUG: Received type: 16
+[LobbyClient] DEBUG: Reading welcome string...
+[LobbyClient] Received welcome: Welcome to Need for Speed 2D, julio 1!
+[Controller] Bienvenida recibida: Welcome to Need for Speed 2D, julio 1!
+[Controller] Abriendo ventana de selección de partidas
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+[Controller] Solicitando lista de partidas al servidor...
+[Protocol] Requested games list
+[LobbyClient] Received 0 games
+[Controller] Recibidas 0 partidas
+[MatchSelectionWindow] Actualizando lista con 0 partidas
+Creando nueva partida...
+[Controller] Usuario quiere crear nueva partida
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+Carrera 1 configurada: Liberty City - Montline Parkway
+Carrera 2 configurada: Liberty City - Montline Parkway
+Carrera 3 configurada: Liberty City - Montline Parkway
+Confirmando creación de partida:
+  Nombre: sala 1
+  Jugadores: 2
+  Carreras: 3
+  Carrera 1: Liberty City - Montline Parkway
+  Carrera 2: Liberty City - Montline Parkway
+  Carrera 3: Liberty City - Montline Parkway
+[Controller] Usuario confirmó creación de partida:
+  Nombre: sala 1
+  Jugadores máximos: 2
+  Número de carreras: 3
+  Carrera: Liberty City - ruta-1 (UI: Montline Parkway)
+  Carrera: Liberty City - ruta-1 (UI: Montline Parkway)
+  Carrera: Liberty City - ruta-1 (UI: Montline Parkway)
+[Protocol] Requested to create game: sala 1 (max players: 2, races: 3)
+[LobbyClient] Game created with ID: 1
+[Controller] Partida creada con ID: 1
+[ClientProtocol]   Race 1: server_src/city_maps/Liberty City/ruta-1.yaml
+[ClientProtocol]   Race 2: server_src/city_maps/Liberty City/ruta-1.yaml
+[ClientProtocol]   Race 3: server_src/city_maps/Liberty City/ruta-1.yaml
+[ClientProtocol]   Received 3 race paths
+[Controller]   Received 3 race paths from server
+[Controller] Abriendo garage...
+[Controller] Abriendo ventana de garage...
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+[GarageWindow] Auto cargado: Leyenda Urbana (tipo: classic)
+[GarageWindow] Auto cargado: Brisa (tipo: sport)
+[GarageWindow] Auto cargado: J-Classic 600 (tipo: classic)
+[GarageWindow] Auto cargado: Cavallo V8 (tipo: sport)
+[GarageWindow] Auto cargado: Senator (tipo: classic)
+[GarageWindow] Auto cargado: Nómada (tipo: truck)
+[GarageWindow] Auto cargado: Stallion GT (tipo: sport)
+[GarageWindow]   7 autos cargados desde config.yaml
+Auto seleccionado: Cavallo V8 (sport)
+[Controller] Auto seleccionado: Cavallo V8
+[Controller] Enviando selección de auto...
+[Protocol] Selected car: Cavallo V8 (sport)
+[Controller] Esperando confirmación (ACK)...
+[LobbyClient] Server confirmed car: Cavallo V8 (sport)
+[Controller]   Auto confirmado por servidor: Cavallo V8
+[Controller] Iniciando listener de notificaciones...
+[LobbyClient] Notification listener started
+[Controller] Abriendo sala de espera...
+[Controller] Inicializando UI de WaitingRoom...
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+[LobbyClient] 🔄 Notification listener STARTED and ACTIVE
+[LobbyClient] 🔍 Waiting for message... (blocking on recv)
+[LobbyClient]   Message received! Type: 0x20
+[LobbyClient] Player joined: julio 2
+[LobbyClient] 🔍 Waiting for message... (blocking on recv)
+[Controller] Notification: Player joined: julio 2
+[LobbyClient]   Message received! Type: 0x23
+[LobbyClient] Player julio 2 selected J-Classic 600
+[LobbyClient] 🔍 Waiting for message... (blocking on recv)
+[Controller] Notification: Player julio 2 selected J-Classic 600
+[Controller] Jugador marcado como: LISTO
+[Controller]   Local ready state updated for julio 1
+[Protocol] Set ready: YES
+Estado listo local: SI
+[LobbyClient]   Message received! Type: 0x22
+[LobbyClient] Player julio 2 is now READY
+[LobbyClient] 🔍 Waiting for message... (blocking on recv)
+[Controller] 🔔 Notification: Player julio 2 ready: 1 (local: julio 1)
+Iniciando partida...
+[Controller] ════════════════════════════════════════════
+[Controller] 🎮 Solicitando inicio de partida al servidor...
+[Controller]   Verificando listener...
+[Controller]   Listener activo: SÍ  
+[Controller]   Enviando start_game(currentGameId=1)...
+[Protocol] Start game request sent for ID: 1
+[Controller]   Solicitud enviada. Esperando MSG_GAME_STARTED...
+[Controller]   (El listener debe capturar el mensaje automáticamente)
+[Controller] ════════════════════════════════════════════
+[LobbyClient]   Message received! Type: 0x14
+[LobbyClient] 🚀🚀🚀 MSG_GAME_STARTED RECEIVED! 🚀🚀🚀
+[LobbyClient] Listener stopped, exiting thread...
+[Controller]   Señal de inicio confirmada por el servidor. Pasando a SDL...
+[LobbyClient] Stopping notification listener...
+[LobbyClient] Listener will stop on next message (no blocking join)
+[Client] Lobby terminado (success=1)
+[Controller] Cerrando ventanas de Qt para iniciar el juego...
+[Controller] Todas las ventanas Qt cerradas
+[Client] Iniciando threads de comunicación...
+[ClientSender]  Thread iniciado, esperando comandos...
+[ClientReceiver] 📡 Thread iniciado, esperando snapshots...
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+
+[Client] Cargando primera carrera: server_src/city_maps/Liberty City/ruta-1.yaml
+[GameRenderer] Inicializando carrera. Config: server_src/city_maps/Liberty City/ruta-1.yaml
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+[GameRenderer] Info -> Ciudad: liberty-city | Ruta: ruta-1
+[GameRenderer] Cargando Assets...
+  - Minimapa: assets/img/map/cities/caminos/liberty-city/ruta-1/debug_resultado_v5.png
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+
+[GameRenderer] Minimapa cargado correctamente. Dim: 4640x4672
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+
+CollisionManager: Capa de rampas cargada.
+CollisionManager: Capas cargadas OK.
+[EventHandler] Inicializado para player 1
+[Client] Entrando al game loop...
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Terminal 3: Cliente 2:
+julio@julio-VirtualBox:~/Escritorio/TALLER/TP FINAL 2/TP_TALLER$ ./client
+=== Need for Speed 2D - Cliente ===
+Conectando a localhost:8080
+[ClientProtocol] Connected to server localhost:8080
+[Client] Cliente inicializado para Player
+[ClientProtocol] Received client ID: 2
+[Client] Iniciando fase de lobby Qt...
+[Controller] Controlador creado (sin conectar al servidor todavía)
+[Controller] Mostrando lobby principal
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+Fuente cargada: ArcadeClassic
+Imagen de fondo cargada correctamente
+SDL Audio inicializado correctamente
+Música de fondo iniciada en loop
+QWidget::setLayout: Cannot set layout to 0
+[LobbyWindow] Botón Jugar presionado
+[Controller] Usuario presionó 'Jugar'
+[LobbyClient] Connected to server 
+[Controller] Conectado exitosamente
+[Controller] Mostrando ventana de ingreso de nombre
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+Nombre de jugador confirmado: julio 2
+[Controller] Usuario confirmó nombre: julio 2
+[Protocol] DEBUG: Username: 'julio 2' (length: 7)
+[Protocol] DEBUG: Buffer size: 10 bytes
+[Protocol] DEBUG: Buffer content: 01 00 07 6A 75 6C 69 6F 20 32 
+[Protocol] DEBUG: Length encoded in buffer: 7
+[Protocol] Sent username: julio 2
+[Controller] Nombre enviado al servidor
+[Controller] Esperando mensaje de bienvenida...
+[LobbyClient] DEBUG: Waiting for welcome message...
+[LobbyClient] DEBUG: Received type: 16
+[LobbyClient] DEBUG: Reading welcome string...
+[LobbyClient] Received welcome: Welcome to Need for Speed 2D, julio 2!
+[Controller] Bienvenida recibida: Welcome to Need for Speed 2D, julio 2!
+[Controller] Abriendo ventana de selección de partidas
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+[Controller] Solicitando lista de partidas al servidor...
+[Protocol] Requested games list
+[Protocol]   Game 1: julio 1
+[LobbyClient] Received 1 games
+[Controller] Recibidas 1 partidas
+[MatchSelectionWindow] Actualizando lista con 1 partidas
+[MatchSelectionWindow] Partida seleccionada ID: 1
+[MatchSelectionWindow] Emitiendo señal de unirse a: 1
+[Controller] Usuario quiere unirse a partida con matchId: 1
+[Controller] Intentando unirse a game_id (de UserRole): 1
+[Protocol] Requested to join game: 1
+[LobbyClient] Joined game: 1
+[Controller] Snapshot recibido: 1 jugadores
+[ClientProtocol]   Race 1: server_src/city_maps/Liberty City/ruta-1.yaml
+[ClientProtocol]   Race 2: server_src/city_maps/Liberty City/ruta-1.yaml
+[ClientProtocol]   Race 3: server_src/city_maps/Liberty City/ruta-1.yaml
+[ClientProtocol]   Received 3 race paths
+[Controller]   Received 3 race paths from server
+[Controller] Abriendo garage...
+[Controller] Abriendo ventana de garage...
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+[GarageWindow] Auto cargado: Leyenda Urbana (tipo: classic)
+[GarageWindow] Auto cargado: Brisa (tipo: sport)
+[GarageWindow] Auto cargado: J-Classic 600 (tipo: classic)
+[GarageWindow] Auto cargado: Cavallo V8 (tipo: sport)
+[GarageWindow] Auto cargado: Senator (tipo: classic)
+[GarageWindow] Auto cargado: Nómada (tipo: truck)
+[GarageWindow] Auto cargado: Stallion GT (tipo: sport)
+[GarageWindow]   7 autos cargados desde config.yaml
+Auto seleccionado: J-Classic 600 (classic)
+[Controller] Auto seleccionado: J-Classic 600
+[Controller] Enviando selección de auto...
+[Protocol] Selected car: J-Classic 600 (classic)
+[Controller] Esperando confirmación (ACK)...
+[LobbyClient] Server confirmed car: J-Classic 600 (classic)
+[Controller]   Auto confirmado por servidor: J-Classic 600
+[Controller] Iniciando listener de notificaciones...
+[LobbyClient] Notification listener started
+[Controller] Abriendo sala de espera...
+[Controller] Inicializando UI de WaitingRoom...
+qt.gui.imageio: libpng warning: iCCP: known incorrect sRGB profile
+[LobbyClient] 🔄 Notification listener STARTED and ACTIVE
+[LobbyClient] 🔍 Waiting for message... (blocking on recv)
+[LobbyClient]   Message received! Type: 0x22
+[LobbyClient] Player julio 1 is now READY
+[Controller] 🔔 Notification: Player julio 1 ready: 1 (local: julio 2)
+[LobbyClient] 🔍 Waiting for message... (blocking on recv)
+[Controller] Jugador marcado como: LISTO
+[Controller]   Local ready state updated for julio 2
+[Protocol] Set ready: YES
+Estado listo local: SI
+[LobbyClient]   Message received! Type: 0x14
+[LobbyClient] 🚀🚀🚀 MSG_GAME_STARTED RECEIVED! 🚀🚀🚀
+[LobbyClient] Listener stopped, exiting thread...
+[Controller]   Señal de inicio confirmada por el servidor. Pasando a SDL...
+[LobbyClient] Stopping notification listener...
+[LobbyClient] Listener will stop on next message (no blocking join)
+[Client] Lobby terminado (success=1)
+[Controller] Cerrando ventanas de Qt para iniciar el juego...
+[Controller] Todas las ventanas Qt cerradas
+[Client] Iniciando threads de comunicación...
+[ClientReceiver] 📡 Thread iniciado, esperando snapshots...
+[ClientSender]  Thread iniciado, esperando comandos...
+[Client] Cargando primera carrera: server_src/city_maps/Liberty City/ruta-1.yaml
+[GameRenderer] Inicializando carrera. Config: server_src/city_maps/Liberty City/ruta-1.yaml
+[GameRenderer] Info -> Ciudad: liberty-city | Ruta: ruta-1
+[GameRenderer] Cargando Assets...
+  - Minimapa: assets/img/map/cities/caminos/liberty-city/ruta-1/debug_resultado_v5.png
+[GameRenderer] Minimapa cargado correctamente. Dim: 4640x4672
+CollisionManager: Capa de rampas cargada.
+CollisionManager: Capas cargadas OK.
+[EventHandler] Inicializado para player 2
+[Client] Entrando al game loop...
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+[ClientProtocol]   🏎️  Player 1: pos=(4440,81) vel=0 km/h angle=0° hp=80
+[ClientProtocol]   🏎️  Player 2: pos=(4400,61) vel=0 km/h angle=0° hp=100
+
